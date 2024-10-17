@@ -1,0 +1,124 @@
+.back-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+body,
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Khand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000; /* Assuming a dark background */
+    color: #ffffff;
+    z-index: 1;
+}
+.edit-profile-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin: 20px;
+}
+.edit-profile-container h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #89c4f4; /* Light blue color */
+}
+.edit-profile-container h3 {
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #89c4f4; /* Light blue color */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #89c4f4; /* Light blue color */
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s, height 0.3s;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select {
+    height: 40px; /* Set a fixed height for all input and select elements */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #1a237e; /* Dark blue color */
+}
+
+@media (max-width: 768px) {
+    .edit-profile-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .buttons button {
+        font-size: 14px;
+    }
+}
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttons button {
+    background: none;
+    border: 1px solid #89c4f4;
+    padding: 10px 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.buttons button:hover {
+    background: #1a237e;
+    /* Màu xanh dương đậm */
+    color: #ffffff;
+}
+
+/*đảo ngược màu sắc của icon lịch*/
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert();
+}
